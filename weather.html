@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Database </title>
+    <meta name="description" content="Webbpage for registration">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        table,
+        th,
+        td {
+            border: 2px outset black;
+            background-color: rgb(245, 237, 237);
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <caption><h1>Information</h1></caption>
+        <thead>
+            <tr>
+                <th>Id:</th>
+                <th>City:</th>
+                <th>Temperature:</th>
+                <th>Humidity:</th>
+                <th>Pressure:</th>
+                <th>Reading_Time:</th>
+            </tr>
+        </thead>
+        {% for i in data%}
+        <tr>
+            <td>{{ i[0] }}</td>
+            <td>{{ i[1] }}</td>
+            <td>{{ i[2] }}</td>
+            <td>{{ i[3] }}</td>
+            <td>{{ i[4] }}</td>
+            <td>{{ i[5] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+</body>
+
+</html>

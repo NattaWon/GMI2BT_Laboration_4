@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Rigister </title>
+    <meta name="description" content="Webbpage for registration">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        label {
+            display: block;
+            font-size: 1.1rem;
+            padding: 0 1rem;
+        }
+        input {
+            margin: 0 1rem;
+        }
+        legend {
+            padding: 0 1rem;
+            font-size: 1.2rem;
+        }
+
+        textarea {
+            display: block;
+        }
+
+        form {
+            width: 30rem;
+        }
+        button {
+            margin: 0 0 .5rem 1rem;
+            padding: 0 1rem;
+        }
+
+        fieldset {
+            border: 2px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="http://127.0.0.1:5000/postjson" method="POST">
+        <fieldset>
+            <legend>Register memberships</legend> <br>
+            <label>Paymet method:<strong><abbr title="required">*</abbr></strong>
+                <select name="paymenttype">
+                    <option value="0" required >Choose payment:</option>
+                    <option value="1">Credit card</option>
+                    <option value="2">Invoice</option>
+                    <option value="3">Swish</option>
+                </select>
+            </label>
+            <p>
+                <label for="name">First Name: <strong><abbr title="required">*</abbr></strong>
+                </label>
+                <input type="text" name="firstName" placeholder="" required />
+            </p>
+            <p>
+                <label for="name">Last Name: <strong><abbr title="required">*</abbr></strong>
+                </label>
+                <input type="text" name="lastName" placeholder="" required />
+            </p>
+            <p>
+                <label for="adress">Address: <strong><abbr title="required">*</abbr></strong>
+                </label>
+                <input type="text" name="adress" placeholder="" required />
+            </p>
+            <p>
+                <label for="zipcode">Zipcode, city: <strong><abbr title="required">*</abbr></strong>
+                </label>
+                <input type="text" name="zipcode" placeholder="Zipcode, city" required />
+            </p>
+            <p>
+                <label for="email">E-mail: <strong><abbr title="required">*</abbr></strong>
+                </label>
+                <input type="email" name="email" placeholder="example@mail.com" required />
+            </p>
+            <p>
+                <label for="pwd">Password: <strong><abbr title="required">*</abbr></strong>
+                </label>
+                <input type="password" name="password" placeholder="********" required />
+                <label>
+                    <br>
+                    Your comments : <textarea cols="30" rows="3" name="comments"></textarea>
+                </label>
+                <br>
+                <button type="submit" class="submit"  name="submit">Send</button>
+                <button type="reset" class="submit"  name="submit">Reset</button>
+            </p>
+        </fieldset>
+    </form>
+</body>
+
+</html>

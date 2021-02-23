@@ -1,0 +1,9 @@
+-- SQLite
+CREATE TABLE SensorData (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    City VARCHAR(30) NOT NULL,
+    Temprature VARCHAR(10),
+    Humidity VARCHAR(10),
+    Pressure VARCHAR(10),
+    reading_time DATETIME DEFAULT CURRENT_TIMESTAMP
+);
